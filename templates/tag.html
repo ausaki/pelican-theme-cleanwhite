@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block title %}{{SITENAME}} - 标签 - {{ tag }}{% endblock %}
+
+{% block content_nav %}
+<nav class="content-nav">
+    标签 - <a href="{{ tag.url }}">{{ tag }} </a>
+</nav>
+{% endblock %}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/public.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
+    <title>{%block title %} {{ SITENAME }} {% endblock %}</title>
+</head>
+
+<body>
+    <nav class="banner navbar navbar-expand-lg navbar-dark">
+        <a href="/" class="navbar-brand">{{ SITENAME }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent"
+            aria-controls="navbarToggleContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggleContent">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item categories">
+                    <a class="nav-link" href="/categories.html" >分类</a>
+                </li>
+                <li class="nav-item tags">
+                    <a class="nav-link" href="/tags.html" >标签</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" name="search">
+                <input type="hidden" name="site" value="{{ GOOGLE_SEARCH_HOSTNAME }}">
+                <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit" name="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container main">
+        {% block main_container %}
+        <div class="row">
+            <div class="content-container col-md-9">
+                {% block content_nav %}
+                {% endblock %}
+
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="sidebar-container col-md-3">
+                {% block sidebar %}
+                <div class="sidebar">
+                    <div class="panel">
+                        <header class="header">分类</header>
+                        {% include 'categories_inc.html' %}
+                    </div>
+                    <div class="panel">
+                        <header class="header">标签</header>
+                        {% include 'tags_inc.html' %}
+                    </div>
+                    <div class="social-links panel">
+                        <header class="header">
+                            链接
+                        </header>
+                        <ul class="list-group list-group-flush tags">
+                            {% for name, link in LINKS %}
+                            <li class="list-group-item">
+                                <a href="{{ link }}" target="_blank">{{ name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    {% endblock %}
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div>
+            <span class="copyright-sp">© 2019</span>
+            <span class="pilican-sp">Proudly powered by <a href="(https://blog.getpelican.com/)">Pelican</a></span>
+            <span class="theme-sp">Based on theme <a href="#">cleanwhite</a> </span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="/theme/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+    <script src="/theme/js/main.js"></script>
+</body>
+
+</html>

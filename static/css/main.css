@@ -1,0 +1,298 @@
+/* base style */
+body {
+    color: #444444;
+    background: #eeeeee;
+    min-height: 100vh;
+}
+
+a {
+    color: #444444;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #000000;
+}
+
+/* layout */
+.banner.navbar-dark {
+    background: #333333;
+}
+
+.banner a.navbar-brand {
+    text-decoration: none;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.banner .navbar-collapse .navbar-nav .tags,
+.banner .navbar-collapse .navbar-nav .categories {
+    display: none;
+}
+
+
+.main.container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content-nav {
+    background: #fff;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 0.5rem;
+    background: #333333;
+    font-size: 0.8rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+/* pagination */
+.pagination {
+    margin: 0;
+    justify-content: center;
+}
+
+.pagination a.page-link {
+    text-decoration: none;
+    color: #444444;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #666666;
+}
+
+/* button copy code  */
+.block-code-hl .copy-code {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: transparent;
+    color: #cccccc;
+    padding: 3px;
+    outline: none;
+    border-radius: 0;
+    line-height: 1;
+}
+
+.block-code-hl .copy-code:hover {
+    color: #ffffff;
+}
+
+/* pannel */
+.panel {
+    background: #ffffff;
+    padding: 1rem;
+}
+
+.panel .header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* reset */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* pymdownx.superfences */
+.superfences-tabs {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.superfences-tabs .highlight {
+    background: #ddd;
+}
+
+.superfences-tabs .superfences-content {
+    display: none;
+    order: 99;
+    width: 100%;
+}
+
+.superfences-tabs label {
+    width: auto;
+    margin: 0 0.5em;
+    padding: 0.25em;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+.superfences-tabs input {
+    position: absolute;
+    opacity: 0;
+}
+
+.superfences-tabs input:nth-child(n+1) {
+    color: #333333;
+}
+
+.superfences-tabs input:nth-child(n+1):checked+label {
+    color: #FF5252;
+}
+
+.superfences-tabs input:nth-child(n+1):checked+label+.superfences-content {
+    display: block;
+}
+
+
+/* 首页文章列表 */
+
+/* 文章列表面板 */
+.article-card {
+    margin-bottom: 2rem;
+}
+
+/* 文章标题 */
+.article-card .article-title .title-link {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.article-card .article-title .title-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #444444;
+    transform: scaleX(0);
+    transition: 200ms 0ms ease-in-out;
+}
+
+.article-card .article-title .title-link:hover::before {
+    transform: scaleX(1);
+}
+
+/* 文章metadata，发表时间 */
+.article-card .article-info {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-style: italic;
+    padding-bottom: 0.5rem;
+    border-bottom: dotted 1px #a2a2a2;
+}
+
+/* 标签 */
+.article-card .tags label {
+    margin-bottom: 0px;
+}
+
+.article-card .tags label:not(:last-child)::after {
+    content: "|";
+    padding: 0.2rem;
+}
+
+/* .article-card .tags label()::after {
+    content: "|";
+    padding: 0.2rem;
+} */
+/* 文章摘要 */
+.article-card .article-summary {
+    margin-top: 1rem;
+}
+
+/* 阅读全文 */
+.article-card .read-more {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.article-card .read-more a {
+    padding: 0.2rem 1rem;
+    color: #444444;
+    border: solid 2px #222222;
+    text-decoration: none;
+}
+
+.article-card .read-more a:hover {
+    color: #ffffff;
+    background: #222222;
+}
+
+/* 侧边栏 */
+
+.sidebar .panel {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+}
+
+.sidebar .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* 文章正文页 */
+.article-card .article-content {
+    margin-top: 1rem;
+}
+
+/* 分类列表 标签列表*/
+.categories .list-group-item,
+.tags .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content-container {
+        padding: 0;
+    }
+
+    .banner .navbar-collapse .navbar-nav .tags,
+    .banner .navbar-collapse .navbar-nav .categories {
+        display: flex;
+    }
+}
+
+/* fix mathjax */
+.MJXc-display {
+    overflow-x: auto;
+}

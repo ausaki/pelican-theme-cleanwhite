@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} {{ SITENAME}} - 首页 {% endblock %}
+
+{% block content %}
+<div class="article-list">
+    {% for article in articles_page.object_list %}
+<article class="panel article-card">
+    <h1 class="article-title"> <a href="{{ article.url }}" class="title-link">{{ article.title }}</a></h1>
+    <div class="article-info">
+        <span class="post-date">发表于：{{ article.date | strftime('%Y/%m/%d') }}</span>
+        <span class="category">分类：<a href="{{ article.category.url }}">{{ article.category }}</a></span>
+        <span class="tags">标签：
+            {% if article.tags %}
+            {% for tag in article.tags %}<label for="" class=""><a
+                    href="{{ tag.url }}">{{ tag }}</a></label>{% endfor %}
+            {% else %}
+            <label for="">None</label>
+            {% endif %}
+        </span>
+    </div>
+    <div class="article-summary">
+        {{ article.summary }}
+    </div>
+    <footer class="read-more">
+        <a href="{{ article.url }}" class="btn">阅读全文</a>
+    </footer>
+</article>
+{% endfor %}
+</div>
+{% include 'pagination.html' %}
+
+{% endblock %}

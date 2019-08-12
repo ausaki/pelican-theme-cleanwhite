@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block title %}{{SITENAME}} - 分类 - {{ category }}{% endblock %}
+
+{% block content_nav %}
+<nav class="content-nav">
+    分类 - <a href="{{ category.url }}">{{ category }} </a>
+</nav>
+{% endblock %}

@@ -1,0 +1,381 @@
+/*! tomorrow night eighties; https://github.com/MozMorris/tomorrow-pygments */
+.block-code-hl {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.block-code-hl pre {
+    background: #2d2d2d !important;
+    color: #cccccc !important;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+
+.block-code-hl .hll {
+    background-color: #515151 !important;
+}
+
+.block-code-hl .c {
+    color: #999999 !important;
+}
+
+/* Comment */
+.block-code-hl .err {
+    color: #f2777a !important;
+}
+
+/* Error */
+.block-code-hl .k {
+    color: #cc99cc !important;
+}
+
+/* Keyword */
+.block-code-hl .l {
+    color: #f99157 !important;
+}
+
+/* Literal */
+.block-code-hl .n,
+.block-code-hl .h {
+    color: #cccccc !important;
+}
+
+/* Name */
+.block-code-hl .o {
+    color: #66cccc !important;
+}
+
+/* Operator */
+.block-code-hl .p {
+    color: #cccccc !important;
+}
+
+/* Punctuation */
+.block-code-hl .cm {
+    color: #999999 !important;
+}
+
+/* Comment.Multiline */
+.block-code-hl .cp {
+    color: #999999 !important;
+}
+
+/* Comment.Preproc */
+.block-code-hl .c1 {
+    color: #999999 !important;
+}
+
+/* Comment.Single */
+.block-code-hl .cs {
+    color: #999999 !important;
+}
+
+/* Comment.Special */
+.block-code-hl .gd {
+    color: #f2777a !important;
+}
+
+/* Generic.Deleted */
+.block-code-hl .ge {
+    font-style: italic !important;
+}
+
+/* Generic.Emph */
+.block-code-hl .gh {
+    color: #cccccc !important;
+    font-weight: bold !important;
+}
+
+/* Generic.Heading */
+.block-code-hl .gi {
+    color: #99cc99 !important;
+}
+
+/* Generic.Inserted */
+.block-code-hl .gp {
+    color: #999999 !important;
+    font-weight: bold !important;
+}
+
+/* Generic.Prompt */
+.block-code-hl .gs {
+    font-weight: bold !important;
+}
+
+/* Generic.Strong */
+.block-code-hl .gu {
+    color: #66cccc !important;
+    font-weight: bold !important;
+}
+
+/* Generic.Subheading */
+.block-code-hl .kc {
+    color: #cc99cc !important;
+}
+
+/* Keyword.Constant */
+.block-code-hl .kd {
+    color: #cc99cc !important;
+}
+
+/* Keyword.Declaration */
+.block-code-hl .kn {
+    color: #66cccc !important;
+}
+
+/* Keyword.Namespace */
+.block-code-hl .kp {
+    color: #cc99cc !important;
+}
+
+/* Keyword.Pseudo */
+.block-code-hl .kr {
+    color: #cc99cc !important;
+}
+
+/* Keyword.Reserved */
+.block-code-hl .kt {
+    color: #ffcc66 !important;
+}
+
+/* Keyword.Type */
+.block-code-hl .ld {
+    color: #99cc99 !important;
+}
+
+/* Literal.Date */
+.block-code-hl .m {
+    color: #f99157 !important;
+}
+
+/* Literal.Number */
+.block-code-hl .s {
+    color: #99cc99 !important;
+}
+
+/* Literal.String */
+.block-code-hl .na {
+    color: #6699cc !important;
+}
+
+/* Name.Attribute */
+.block-code-hl .nb {
+    color: #cccccc !important;
+}
+
+/* Name.Builtin */
+.block-code-hl .nc {
+    color: #ffcc66 !important;
+}
+
+/* Name.Class */
+.block-code-hl .no {
+    color: #f2777a !important;
+}
+
+/* Name.Constant */
+.block-code-hl .nd {
+    color: #66cccc !important;
+}
+
+/* Name.Decorator */
+.block-code-hl .ni {
+    color: #cccccc !important;
+}
+
+/* Name.Entity */
+.block-code-hl .ne {
+    color: #f2777a !important;
+}
+
+/* Name.Exception */
+.block-code-hl .nf {
+    color: #6699cc !important;
+}
+
+/* Name.Function */
+.block-code-hl .nl {
+    color: #cccccc !important;
+}
+
+/* Name.Label */
+.block-code-hl .nn {
+    color: #ffcc66 !important;
+}
+
+/* Name.Namespace */
+.block-code-hl .nx {
+    color: #6699cc !important;
+}
+
+/* Name.Other */
+.block-code-hl .py {
+    color: #cccccc !important;
+}
+
+/* Name.Property */
+.block-code-hl .nt {
+    color: #66cccc !important;
+}
+
+/* Name.Tag */
+.block-code-hl .nv {
+    color: #f2777a !important;
+}
+
+/* Name.Variable */
+.block-code-hl .ow {
+    color: #66cccc !important;
+}
+
+/* Operator.Word */
+.block-code-hl .w {
+    color: #cccccc !important;
+}
+
+/* Text.Whitespace */
+.block-code-hl .mf {
+    color: #f99157 !important;
+}
+
+/* Literal.Number.Float */
+.block-code-hl .mh {
+    color: #f99157 !important;
+}
+
+/* Literal.Number.Hex */
+.block-code-hl .mi {
+    color: #f99157 !important;
+}
+
+/* Literal.Number.Integer */
+.block-code-hl .mo {
+    color: #f99157 !important;
+}
+
+/* Literal.Number.Oct */
+.block-code-hl .sb {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Backtick */
+.block-code-hl .sc {
+    color: #cccccc !important;
+}
+
+/* Literal.String.Char */
+.block-code-hl .sd {
+    color: #999999 !important;
+}
+
+/* Literal.String.Doc */
+.block-code-hl .s2 {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Double */
+.block-code-hl .se {
+    color: #f99157 !important;
+}
+
+/* Literal.String.Escape */
+.block-code-hl .sh {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Heredoc */
+.block-code-hl .si {
+    color: #f99157 !important;
+}
+
+/* Literal.String.Interpol */
+.block-code-hl .sx {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Other */
+.block-code-hl .sr {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Regex */
+.block-code-hl .s1 {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Single */
+.block-code-hl .ss {
+    color: #99cc99 !important;
+}
+
+/* Literal.String.Symbol */
+.block-code-hl .bp {
+    color: #cccccc !important;
+}
+
+/* Name.Builtin.Pseudo */
+.block-code-hl .vc {
+    color: #f2777a !important;
+}
+
+/* Name.Variable.Class */
+.block-code-hl .vg {
+    color: #f2777a !important;
+}
+
+/* Name.Variable.Global */
+.block-code-hl .vi {
+    color: #f2777a !important;
+}
+
+/* Name.Variable.Instance */
+.block-code-hl .il {
+    color: #f99157 !important;
+}
+
+/* Literal.Number.Integer.Long */
+
+/* line number */
+.block-code-hl .lineno::before {
+    content: attr(data-linenos);
+    display: inline-block;
+    margin-right: 0.5rem;
+    border-right: 1px #666666 solid;
+    text-align: right;
+    margin-left: -0.5rem;
+    padding: 0 0.3rem 0 0.5rem;
+}
+
+.block-code-hl .lineno.special::before {
+    background: #515151;
+}
+
+/* lineno table-style */
+.block-code-hltable {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.block-code-hltable .linenos {
+    width: 2rem;
+    text-align: right;
+    padding: 0;
+    border-right: 1px solid #555555;
+}
+
+.block-code-hltable .linenos pre {
+    background: #2d2d2d !important;
+    color: #cccccc !important;
+    padding: 0.5rem;
+    margin-bottom: 0;
+}
+
+.block-code-hltable .code {
+    padding: 0;
+}
+
+.block-code-hltable .block-code-hl {
+    margin: 0;
+}
