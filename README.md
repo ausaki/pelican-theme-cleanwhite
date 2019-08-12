@@ -6,6 +6,19 @@ requirements:
 
 - pelican plugin: [neighbors](https://github.com/getpelican/pelican-plugins/tree/master/neighbors)
 
+features:
+
+- responsive.
+
+- styled and beautiful Markdown code.
+
+- support LaTex mathematics.
+
+- search articles with Google.
+
+- ...
+
+
 suggest pelicanconf.py:
 
 ```py
