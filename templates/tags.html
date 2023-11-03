@@ -9,5 +9,11 @@
 {% endblock %}
 
 {% block content %}
-{% include 'tags_inc.html' %}
+<ul class="list-group list-group-flush tags">
+    {% for tag, articles in tags|sort %}
+    <li class="list-group-item"><a href="{{ tag.url }}">{{ tag }}</a>
+        <span class="badge badge-dark">{{ articles|count }}</span>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}

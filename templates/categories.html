@@ -9,5 +9,12 @@
 {% endblock %}
 
 {% block content %}
-{% include 'categories_inc.html' %}
+<ul class="list-group list-group-flush categories">
+    {% for category, articles in categories|sort %}
+    <li class="list-group-item">
+        <a href="{{ category.url }}">{{ category }}</a>
+        <span class="badge badge-dark">{{ articles|count }}</span>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}

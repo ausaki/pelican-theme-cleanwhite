@@ -49,12 +49,27 @@
                 {% block sidebar %}
                 <div class="sidebar">
                     <div class="panel">
-                        <header class="header">分类</header>
-                        {% include 'categories_inc.html' %}
+                        <header class="header"><a href="/categories.html">分类</a></header>
+                        <ul class="list-group list-group-flush categories">
+                          {% set max_categories = MAX_CATEGORIES_IN_SIDEBAR|default(50) %}
+                          {% for category, articles in (categories|sort)[:max_categories] %}
+                          <li class="list-group-item">
+                              <a href="{{ category.url }}">{{ category }}</a>
+                              <span class="badge badge-dark">{{ articles|count }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
                     </div>
                     <div class="panel">
-                        <header class="header">标签</header>
-                        {% include 'tags_inc.html' %}
+                        <header class="header"><a href="/tags.html">标签</a></header>
+                            <ul class="list-group list-group-flush tags">
+                                {% set max_tags = MAX_TAGS_IN_SIDEBAR|default(50) %}
+                                {% for tag, articles in (tags|sort)[:max_tags] %}
+                                <li class="list-group-item"><a href="{{ tag.url }}">{{ tag }}</a>
+                                    <span class="badge badge-dark">{{ articles|count }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
                     </div>
                     <div class="social-links panel">
                         <header class="header">
@@ -68,7 +83,6 @@
                             {% endfor %}
                         </ul>
                     </div>
-
                     {% endblock %}
                 </div>
             </div>
